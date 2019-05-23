@@ -45,33 +45,18 @@
 
 <script type="text/ng-template" id="weight.html">
     <div class="unit">
-        <div class="label">Weight ({{ctrl.minWeightRange}} - {{ctrl.maxWeightRange}}):</div>
+        <div class="label">Weight ({{ctrl.minWeightRange}} - {{ctrl.maxWeightRange}})&nbsp libs</div>
         <div class="labelTarget">
-            <input name="weight"
-                   id="weight"
-                   type="number"
-                   required=""
-                   ng-class="{ error : ctrl.form.weight.$invalid }"
-                   ng-model="ctrl.weightValue"
-                   min="{{ctrl.minWeightRange}}"
-                   max="{{ctrl.maxWeightRange}}"/>
-            {{ctrl.uomService.usMeasure | weight}}
+          <input type="range" step="1" min="{{ctrl.minWeightRange}}" max="{{ctrl.maxWeightRange}}" ng-model="ctrl.weightValue"/>
         </div>
     </div>
 </script>
 
 <script type="text/ng-template" id="age.html">
     <div class="unit">
-        <div class="label">Age (13 - 120):</div>
+        <div class="label">Age (13 - 120) years:</div>
         <div class="labelTarget">
-            <input name="age"
-                   min="13"
-                   max="120"
-                   id="age"
-                   type="number"
-                   required=""
-                   ng-class="{ error : ctrl.form.age.$invalid }"
-                   ng-model="ctrl.ageValue"/>years
+            <input type="range" step="1" min="{{ctrl.minAgeRange}}" max="{{ctrl.maxAgeRange}}" ng-model="ctrl.ageValue"/>
         </div>
     </div>
 </script>
