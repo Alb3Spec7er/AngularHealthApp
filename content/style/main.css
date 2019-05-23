@@ -28,7 +28,8 @@ div.tile {
     float: left;
     margin: 5px;
     padding: 5px;
-    background: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    background: deepskyblue ;
     border: solid 2px darkblue;
 }
 
